@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var dataProvider: DataProvider
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            WatchlistView()
+                .environmentObject(dataProvider)
+        }
     }
 }
 

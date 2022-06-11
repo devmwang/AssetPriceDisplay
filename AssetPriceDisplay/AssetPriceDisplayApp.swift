@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct AssetPriceDisplayApp: App {
+    @StateObject private var dataProvider = DataProvider()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dataProvider)
         }
     }
 }
