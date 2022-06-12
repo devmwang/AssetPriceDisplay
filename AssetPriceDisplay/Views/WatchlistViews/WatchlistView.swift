@@ -9,25 +9,41 @@ import SwiftUI
 import CoreData
 
 struct WatchlistView: View {
-    @EnvironmentObject private var dataProvider: DataProvider
+    @Environment(\.managedObjectContext) var managedObjectContext
+    let dataProvider = DataProvider.DataProviderInstance
     
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.ticker)])
+    private var watchlist: FetchedResults<Asset>
     
+    @State private var data = AssetModel.Data()
+    @State private var isPresentingEditAssetView = false
+
     var body: some View {
         VStack {
-            List(dataProvider.watchlist) { asset in
-                Text(asset.ticker ?? "Unknown")
-                    .swipeActions(allowsFullSwipe: true) {
-                        Button("Delete", role: .destructive) {
-
+            if watchlist.count == 0 {
+                VStack {
+                    Text("Add an asset to watchlist to get started!")
+                }
+            } else {
+                List {
+                    ForEach(watchlist) { asset in
+                        Button(action: {
+                            isPresentingEditAssetView = true
+                        }) {
+                            CardView(asset: asset)
                         }
                     }
+                    .onDelete(perform: removeAsset)
+                }
             }
         }
     }
-}
+    
+    private func removeAsset(offsets: IndexSet) {       
+        withAnimation {
+            offsets.map { watchlist[$0] }.forEach(managedObjectContext.delete)
 
-struct WatchlistView_Previews: PreviewProvider {
-    static var previews: some View {
-        WatchlistView()
+            dataProvider.persistAllChanges()
+        }
     }
 }

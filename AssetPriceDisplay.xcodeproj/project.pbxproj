@@ -15,6 +15,9 @@
 		45D4F0DA2852DED5003EA2DF /* AssetPriceDisplay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45D4F0D82852DED5003EA2DF /* AssetPriceDisplay.xcdatamodeld */; };
 		45D4F0DC2852E9B2003EA2DF /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4F0DB2852E9B2003EA2DF /* DataProvider.swift */; };
 		45DB34DC28530F7D007FA63F /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB34DB28530F7D007FA63F /* AssetModel.swift */; };
+		45DB34FD28542B18007FA63F /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB34FC28542B18007FA63F /* EditView.swift */; };
+		45DB34FF28542DA9007FA63F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB34FE28542DA9007FA63F /* CardView.swift */; };
+		45DB350228544BAB007FA63F /* REST_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DB350128544BAB007FA63F /* REST_Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		45D4F0D92852DED5003EA2DF /* AssetPriceDisplay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AssetPriceDisplay.xcdatamodel; sourceTree = "<group>"; };
 		45D4F0DB2852E9B2003EA2DF /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		45DB34DB28530F7D007FA63F /* AssetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
+		45DB34FC28542B18007FA63F /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		45DB34FE28542DA9007FA63F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		45DB350128544BAB007FA63F /* REST_Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST_Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		4516C463284FDD9A00A6F888 /* AssetPriceDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				45DB350028544B88007FA63F /* External */,
 				45D4F0CB28504D3E003EA2DF /* Views */,
 				4516C472284FDEEB00A6F888 /* Models */,
 				4516C464284FDD9A00A6F888 /* AssetPriceDisplayApp.swift */,
@@ -99,8 +106,18 @@
 			isa = PBXGroup;
 			children = (
 				45D4F0CC28504D5D003EA2DF /* WatchlistView.swift */,
+				45DB34FC28542B18007FA63F /* EditView.swift */,
+				45DB34FE28542DA9007FA63F /* CardView.swift */,
 			);
 			path = WatchlistViews;
+			sourceTree = "<group>";
+		};
+		45DB350028544B88007FA63F /* External */ = {
+			isa = PBXGroup;
+			children = (
+				45DB350128544BAB007FA63F /* REST_Helper.swift */,
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +193,11 @@
 				45D4F0CD28504D5D003EA2DF /* WatchlistView.swift in Sources */,
 				4516C467284FDD9A00A6F888 /* ContentView.swift in Sources */,
 				45D4F0DC2852E9B2003EA2DF /* DataProvider.swift in Sources */,
+				45DB350228544BAB007FA63F /* REST_Helper.swift in Sources */,
 				4516C465284FDD9A00A6F888 /* AssetPriceDisplayApp.swift in Sources */,
+				45DB34FD28542B18007FA63F /* EditView.swift in Sources */,
 				45DB34DC28530F7D007FA63F /* AssetModel.swift in Sources */,
+				45DB34FF28542DA9007FA63F /* CardView.swift in Sources */,
 				45D4F0DA2852DED5003EA2DF /* AssetPriceDisplay.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +334,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -346,6 +367,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;

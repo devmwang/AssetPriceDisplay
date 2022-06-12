@@ -6,13 +6,10 @@
 //
 
 import Foundation
-import CoreData
 
-public class AssetModel: NSManagedObject, Identifiable {
-    public class func fetchRequest() -> NSFetchRequest<AssetModel> {
-        return NSFetchRequest<AssetModel>(entityName: "Asset")
+public class AssetModel {
+    struct Data {
+        var ticker: String = ""
+        var type: String = ""
     }
-    
-    @NSManaged public var ticker: String?
-    @NSManaged public var type: String?
 }
