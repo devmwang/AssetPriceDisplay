@@ -19,3 +19,7 @@ This app was developed on an M1 Pro MacBook Pro running macOS Monterey and Xcode
 This app's functionality and stability has only been tested on an iPhone 12 Pro running iOS 15.
 
 This app may or may not be compatible with any other devices. Use at your own risk.
+
+## Assets Used
+
+App icon assets from [icon pack created by rukanicon uploaded to Flaticon](https://www.flaticon.com/free-icons/sales-marketing)
