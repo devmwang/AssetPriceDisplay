@@ -20,8 +20,12 @@ struct CardView: View {
                     .font(.caption)
             }
             Spacer()
-            Text(asset.type ?? "Unknown")
-                .font(.headline)
+            if asset.price == 0 {
+                Text("No data available.")
+            } else {
+                Text("$\(asset.price.stringValue)")
+                    .font(.headline)
+            }
         }
         .padding()
     }

@@ -11,5 +11,6 @@ public class AssetModel {
     struct Data {
         var ticker: String = ""
         var type: String = ""
+        var price: Double = 0.00
     }
 }
